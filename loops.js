@@ -36,19 +36,17 @@ for (var i=0; i<=20; i++) {
 // given array.
 // Let num = [-2, 4,-5, 6,0]
 
-function findLargest(a, b, c, d, e) {
-    let numArray = [b, c, d, e];
-    let largest = a;
+
+    var numArray = [-2, 4,-5, 6,0];
+    var largest =  numArray[0];
   
-    for (let item of numArray) {
-      if (item > largest) {
-        largest = item;
+    for (var i = 0; i < numArray.length; i++) {
+      if (largest < numArray[i]) {
+        largest = numArray[i];
       }
     }
-    return largest;
-  }
-  
-  console.log(getLargest(-2, 4,-5, 6,0));
+
+  console.log(largest);
 
 // 5. Using conditional statements, write a JavaScript program to find the largest of the
 // following two numbers: 10 & 40
@@ -63,11 +61,12 @@ else{
 }
 
 // 6. Write a JavaScript program to find leap years from 2000 to 2022
-// function isLeapYear(year)
-//     for (var year = 2000; year < 2022; year++) {
-// 	if(year % 400 === 0 && year % 4 === 0){
-//       return true
-//     } else {
-//       return false
-//     }
-// }
+    for (var year = 2000; year < 2022; year++) {
+	if(year % 400!= 0 && year % 4!== 0){
+  console.log(`${year} not leap year`);
+ }
+  else{
+  console.log(`${year} is leap year`);
+  }
+}
+   
